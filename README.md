@@ -1,2 +1,2 @@
 # AWS_Sagemaker_CVD_Prediction
-predict cardiovascular desease in aws using sagemaker
+predict cardiovascular disease in aws using sagemaker
