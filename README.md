@@ -11,10 +11,23 @@ The purpose of this project is to predict cardiovascular disease in aws using sa
 ## Running the JupyterNotebook
 - create an IAM user with adequate permissions
 - open the notebook in Sagemaker Studio
+- select image "Data Science"
+- select kernel: Python 3
+
+## Exploratory Data Analysis
+- see Jupyter Notebook
+
+## Model Development
+- see Jupyter Notebook
 
 ## Model Evaluation
 
 ![cm](figures/confusion_mat.png)
 
-The precision-recall curve confirms that achieving a recall of 50% comes in for free in terms that the precision starts decreasing only when the recall is above 50%. An efficient set point would be to chose a recall of around 80% and thus allowing the precision to drop to around 80%. However, optimizing the tradeoff between recall and precision requires profound business knowlede in terms of the costs of false-positive and false-negative predictions.  
+The confusion matrix shows the percentages of the true predicted labels (0: healthy; 1: cardiovascular disease) using the linear built-in model by Sagemaker. The model correctly classifies 75% of all healthy subjects as healthy while 25% of the heathy are being misclassified as being healthy. The model further classifies 69% of all unhealthy subjects as unhealthy while 31% of the healthy are being misclassified as being healthy. The overall accuracy score of the model is 72%. With a recall score of 69% and a precision score of 73%, the f1 score is 71%. The roc-auc score is 78%.  
 
+![cm](figures/prec_recall.png)
+
+Plotting recall vs precision shows that the precision smoothly decreases with increasing recall. For example, if the model is calibrated to detect 80% (recall) of all subjects with cardiovascular disease, then the precision is a little below 70% meaning the 70% of all predictions are correct.  
+
+In conclusion, the mode is quite robust but however could probably be improved by applying also non-linear classifiers such as xgboost or neural networks.
