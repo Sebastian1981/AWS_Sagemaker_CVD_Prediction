@@ -24,7 +24,7 @@ The purpose of this project is to predict cardiovascular disease in aws using sa
 
 ![cm](figures/confusion_mat.png)
 
-The confusion matrix shows the percentages of the true predicted labels (0: healthy; 1: cardiovascular disease) using the linear built-in linear model by Sagemaker. The model correctly classifies 75% of all healthy subjects as healthy while 25% are being misclassified as unhealthy. The model further classifies 69% of all unhealthy subjects as unhealthy while 31% are misclassified as being healthy. The overall accuracy score of the model is 72%. Using a decision threshold of 0.5 leads to a recall score of 69%, a precision score of 73% and thus a f1 score of 71%. The roc-auc score is 78%.  
+The confusion matrix shows the percentages of the predicted labels with reference to the ground truth (0: healthy; 1: cardiovascular disease) using the linear built-in linear model by Sagemaker. The model correctly classifies 75% of all healthy subjects as healthy while 25% are being misclassified as unhealthy. The model further classifies 69% of all unhealthy subjects as unhealthy while 31% are misclassified as being healthy. The overall accuracy score of the model is 72%. Using a decision threshold of 0.5 leads to a recall score of 69%, a precision score of 73% and thus a f1 score of 71%. The roc-auc score is 78%.  
 
 ![cm](figures/prec_recall.png)
 
