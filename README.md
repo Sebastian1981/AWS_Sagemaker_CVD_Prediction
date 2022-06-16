@@ -24,10 +24,10 @@ The purpose of this project is to predict cardiovascular disease in aws using sa
 
 ![cm](figures/confusion_mat.png)
 
-The confusion matrix shows the percentages of the true predicted labels (0: healthy; 1: cardiovascular disease) using the linear built-in model by Sagemaker. The model correctly classifies 75% of all healthy subjects as healthy while 25% of the heathy are being misclassified as being healthy. The model further classifies 69% of all unhealthy subjects as unhealthy while 31% of the healthy are being misclassified as being healthy. The overall accuracy score of the model is 72%. With a recall score of 69% and a precision score of 73%, the f1 score is 71%. The roc-auc score is 78%.  
+The confusion matrix shows the percentages of the true predicted labels (0: healthy; 1: cardiovascular disease) using the linear built-in linear model by Sagemaker. The model correctly classifies 75% of all healthy subjects as healthy while 25% are being misclassified as unhealthy. The model further classifies 69% of all unhealthy subjects as unhealthy while 31% are misclassified as being healthy. The overall accuracy score of the model is 72%. Using a decision threshold of 0.5 leads to a recall score of 69%, a precision score of 73% and thus a f1 score of 71%. The roc-auc score is 78%.  
 
 ![cm](figures/prec_recall.png)
 
-Plotting recall vs precision shows that the precision smoothly decreases with increasing recall. For example, if the model is calibrated to detect 80% (recall) of all subjects with cardiovascular disease, then the precision is a little below 70% meaning the 70% of all predictions are correct.  
+Having a closer look at the trade-off between recall and precision shows that for example if the model is calibrated to detect 80% (recall) of all subjects with cardiovascular disease, then the precision is nearly 70% meaning 30% of all predictions are incorrect.  
 
 In conclusion, the mode is quite robust but however could probably be improved by applying also non-linear classifiers such as xgboost or neural networks.
