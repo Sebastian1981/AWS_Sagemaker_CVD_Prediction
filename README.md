@@ -2,7 +2,7 @@
 
 ## Project Overview
 The purpose of this project is to predict cardiovascular disease in aws using sagemaker studio. This feasibility study is structured in the following order:
-- Exploratory data analysis
+- Exploratory Data Analysis
 - Model development using sklearn´s open-source linear model
 - Model development using Sagemaker´s build-in linear model
 - Model Deployment
@@ -18,7 +18,7 @@ The purpose of this project is to predict cardiovascular disease in aws using sa
 - see Jupyter Notebook
 
 ## Model Development
-- see Jupyter Notebook
+- see JuPyter Notebook
 
 ## Model Evaluation
 
