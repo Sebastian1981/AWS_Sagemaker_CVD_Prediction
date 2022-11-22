@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # dont synch csv files
-#*.csv
+*.csv
